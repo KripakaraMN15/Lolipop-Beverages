@@ -43,7 +43,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-border/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] uppercase tracking-widest text-muted-foreground/50">
-            © 2024 Lolipop - Designed with Gut Health in Mind.
+            © 2025 Lolipop - Designed By Kripakara M N.
           </p>
           <div className="flex gap-8 text-[10px] uppercase tracking-widest text-muted-foreground/50">
              <a href="#" className="hover:text-foreground transition-colors">Accessibility</a>
