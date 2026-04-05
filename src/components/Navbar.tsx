@@ -38,7 +38,7 @@ export default function Navbar() {
       isScrolled ? "bg-background/80 backdrop-blur-md py-4 border-b border-border/10" : "bg-transparent"
     )}>
       <div className="flex items-center gap-2">
-        <span className="font-headline text-2xl tracking-tighter font-bold">OliScape</span>
+        <span className="font-headline text-2xl tracking-tighter font-bold">Lolipop</span>
       </div>
 
       <div className="hidden md:flex items-center gap-8">

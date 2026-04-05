@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-12 md:px-24">
         <div className="grid md:grid-cols-4 gap-16 mb-24">
           <div className="col-span-2 space-y-8">
-            <h2 className="font-headline text-4xl font-bold tracking-tighter">OliScape</h2>
+            <h2 className="font-headline text-4xl font-bold tracking-tighter">Lolipop</h2>
             <p className="text-muted-foreground max-w-sm leading-relaxed">
               Crafting a more flavorful future for your digestive health. Experience functional refreshment at its finest.
             </p>
@@ -43,7 +43,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-border/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] uppercase tracking-widest text-muted-foreground/50">
-            © 2024 OliScape (Olipop) - Designed with Gut Health in Mind.
+            © 2024 Lolipop - Designed with Gut Health in Mind.
           </p>
           <div className="flex gap-8 text-[10px] uppercase tracking-widest text-muted-foreground/50">
              <a href="#" className="hover:text-foreground transition-colors">Accessibility</a>

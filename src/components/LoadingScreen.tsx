@@ -26,8 +26,8 @@ export default function LoadingScreen({ progress, onFinished }: LoadingScreenPro
   return (
     <div className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background transition-opacity duration-1000 ${progress >= 100 ? 'opacity-0' : 'opacity-100'}`}>
       <div className="mb-8 flex flex-col items-center">
-        <h1 className="font-headline text-5xl tracking-[0.2em] font-light text-foreground mb-2">OLIPOP</h1>
-        <p className="font-body text-xs tracking-[0.5em] text-muted-foreground uppercase">OliScape Experience</p>
+        <h1 className="font-headline text-5xl tracking-[0.2em] font-light text-foreground mb-2">LOLIPOP</h1>
+        <p className="font-body text-xs tracking-[0.5em] text-muted-foreground uppercase">Lolipop Experience</p>
       </div>
       
       <div className="w-64 space-y-4">

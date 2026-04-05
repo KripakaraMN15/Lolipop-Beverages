@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'OliScape | Cinematic Premium Drinks',
-  description: 'Experience the modern functional soda brand Olipop with OliScape cinematic parallax experience.',
+  title: 'Lolipop | Cinematic Premium Drinks',
+  description: 'Experience the modern functional soda brand Lolipop with Lolipop cinematic parallax experience.',
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

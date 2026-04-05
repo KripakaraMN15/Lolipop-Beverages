@@ -16,7 +16,7 @@ export default function Sections() {
         <div className="space-y-8">
           <h2 className="font-headline text-5xl md:text-7xl leading-tight">Better ingredients,<br /><span className="text-accent">finer taste.</span></h2>
           <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-xl">
-            Olipop combines a marshmallowy taste with the refreshing pop of a classic soda. Our proprietary blend of prebiotics and botanical extracts supports your microbiome while delivering that nostalgic flavor you crave.
+            Lolipop combines a marshmallowy taste with the refreshing pop of a classic soda. Our proprietary blend of prebiotics and botanical extracts supports your microbiome while delivering that nostalgic flavor you crave.
           </p>
           <div className="grid grid-cols-2 gap-8">
             <div className="space-y-2">
@@ -32,7 +32,7 @@ export default function Sections() {
         <div className="relative aspect-square rounded-3xl overflow-hidden bg-card border border-border/50 p-12">
            <Image 
              src="https://picsum.photos/seed/soda1/800/800" 
-             alt="Olipop Can Close-up" 
+             alt="Lolipop Can Close-up" 
              fill 
              className="object-cover opacity-80"
              data-ai-hint="soda can"
@@ -119,7 +119,7 @@ export default function Sections() {
           <div className="order-1 lg:order-2 space-y-8">
             <h2 className="font-headline text-5xl md:text-7xl">Transparent.<br />Honest.<br /><span className="text-accent">Real.</span></h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              We don't hide behind "natural flavors" or complex chemistry. Every can of Olipop is a simple promise: great taste, high fiber, and almost zero sugar.
+              We don't hide behind "natural flavors" or complex chemistry. Every can of Lolipop is a simple promise: great taste, high fiber, and almost zero sugar.
             </p>
             <div className="space-y-4">
               {[
@@ -179,7 +179,7 @@ export default function Sections() {
         <h2 className="font-headline text-5xl text-center mb-16">Got Questions?</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
           <AccordionItem value="item-1" className="border border-border/30 rounded-2xl px-6 bg-card/10">
-            <AccordionTrigger className="text-lg font-headline py-6 hover:no-underline">Is Olipop safe to drink every day?</AccordionTrigger>
+            <AccordionTrigger className="text-lg font-headline py-6 hover:no-underline">Is Lolipop safe to drink every day?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
               Absolutely! In fact, we recommend it. The 9g of prebiotic fiber per can helps consistently feed the good bacteria in your gut.
             </AccordionContent>
@@ -193,7 +193,7 @@ export default function Sections() {
           <AccordionItem value="item-3" className="border border-border/30 rounded-2xl px-6 bg-card/10">
             <AccordionTrigger className="text-lg font-headline py-6 hover:no-underline">What is the shelf life?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-              Olipop is best enjoyed within 12 months of its production date. Each can is stamped with an expiration date on the bottom.
+              Lolipop is best enjoyed within 12 months of its production date. Each can is stamped with an expiration date on the bottom.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
