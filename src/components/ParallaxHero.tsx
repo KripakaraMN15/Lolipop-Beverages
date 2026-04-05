@@ -12,7 +12,7 @@ export default function ParallaxHero({ activeVariantIndex, setActiveVariantIndex
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [currentFrame, setCurrentFrame] = useRef(1);
+  const currentFrame = useRef(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const variant = DRINK_VARIANTS[activeVariantIndex];
   
