@@ -2,6 +2,8 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  // Netlify-friendly static export (generates `out/` on `next build`)
+  output: 'export',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -9,6 +11,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // Required for `output: 'export'` (Next Image Optimization needs a server).
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
