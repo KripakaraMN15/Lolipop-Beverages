@@ -14,7 +14,20 @@ export default function ParallaxHero({ activeVariantIndex, setActiveVariantIndex
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const currentFrame = useRef(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const variant = DRINK_VARIANTS[activeVariantIndex];
+
+  // Track mouse coordinates for smooth 3D parallax effect
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) - 0.5;
+      const y = (e.clientY / window.innerHeight) - 0.5;
+      setMousePos({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
   
   // Frame Preloading for current variant
   const frames = useMemo(() => {
@@ -109,17 +122,57 @@ export default function ParallaxHero({ activeVariantIndex, setActiveVariantIndex
     }, 400);
   };
 
+  const translateX = mousePos.x * -25;
+  const translateY = mousePos.y * -25;
+
   return (
     <section ref={containerRef} className="relative h-[400vh] w-full">
+      <style>{`
+        @keyframes kenBurnsSlow {
+          0% { transform: scale(1.05) translate(0, 0); }
+          50% { transform: scale(1.15) translate(1%, -0.5%); }
+          100% { transform: scale(1.05) translate(0, 0); }
+        }
+        .animate-kenburns-slow {
+          animation: kenBurnsSlow 30s infinite ease-in-out;
+        }
+      `}</style>
+
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
+        {/* Flavor Splash Backgrounds */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          {DRINK_VARIANTS.map((v, i) => (
+            <div
+              key={v.id}
+              className={cn(
+                "absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out",
+                activeVariantIndex === i ? "opacity-100" : "opacity-0"
+              )}
+              style={{
+                transform: `translate3d(${translateX}px, ${translateY}px, 0)`,
+                transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease-in-out',
+              }}
+            >
+              <img
+                src={v.bgImage}
+                alt={`${v.name} Background`}
+                className={cn(
+                  "w-full h-full object-cover scale-105 opacity-35 select-none pointer-events-none",
+                  activeVariantIndex === i ? "animate-kenburns-slow" : ""
+                )}
+              />
+            </div>
+          ))}
+        </div>
+
         {/* The Animated Canvas Background */}
         <canvas 
           ref={canvasRef} 
-          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
+          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 z-10 pointer-events-none"
         />
 
         {/* Hero Overlay Content */}
-        <div className="relative z-10 h-full w-full max-w-[1400px] mx-auto px-12 md:px-24 flex items-center justify-between">
+        <div className="relative z-20 h-full w-full max-w-[1400px] mx-auto px-12 md:px-24 flex items-center justify-between">
           
           {/* Left Side Info */}
           <div className={cn(

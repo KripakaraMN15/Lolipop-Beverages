@@ -6,6 +6,7 @@ export interface DrinkVariant {
   themeColor: string;
   frameCount: number;
   sequenceBaseUrl: string;
+  bgImage: string;
   modeOverride?: 'dark' | 'light';
 }
 
@@ -18,6 +19,7 @@ export const DRINK_VARIANTS: DrinkVariant[] = [
     themeColor: '#D32F2F',
     frameCount: 240,
     sequenceBaseUrl: 'https://omqaodalyvzbrvckcumi.supabase.co/storage/v1/object/public/assets/soda/frame_',
+    bgImage: '/cherry-bg.png',
   },
   {
     id: 'grape',
@@ -27,6 +29,7 @@ export const DRINK_VARIANTS: DrinkVariant[] = [
     themeColor: '#7B1FA2',
     frameCount: 240,
     sequenceBaseUrl: 'https://omqaodalyvzbrvckcumi.supabase.co/storage/v1/object/public/assets/soda2/frame_',
+    bgImage: '/grape-bg.png',
   },
   {
     id: 'lemon',
@@ -36,6 +39,7 @@ export const DRINK_VARIANTS: DrinkVariant[] = [
     themeColor: '#FBC02D',
     frameCount: 240,
     sequenceBaseUrl: 'https://omqaodalyvzbrvckcumi.supabase.co/storage/v1/object/public/assets/soda3/frame_',
+    bgImage: '/lemon-bg.png',
   },
 ];
 

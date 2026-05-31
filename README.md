@@ -41,8 +41,31 @@ npm install
 npm run dev
 ```
 
+Then open `http://localhost:9002`.
 
+## Build
 
+This project is configured for **static export** (`output: 'export'`), so `next build` generates an `out/` folder.
 
+```bash
+npm run build
+```
 
+## Netlify deployment
 
+### Option A: Generate a ready-to-upload folder
+
+```bash
+npm run deploy:netlify
+```
+
+This creates `deploy/netlify/`. Upload that folder to Netlify (drag-and-drop) or use it as a publish directory.
+
+### Option B: Netlify Git deploy settings
+
+- **Build command**: `npm run build:netlify`
+- **Publish directory**: `out`
+
+## Notes
+
+- `.env` is ignored by git. If you add keys locally, do not commit them.
